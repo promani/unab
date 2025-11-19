@@ -16,7 +16,7 @@ CREATE TABLE `respuesta` (
   `encuesta_id` int DEFAULT NULL,
   `valor` text NOT NULL,
   `fecha` datetime NOT NULL,
-  `valor_recodificado` varchar(255) DEFAULT NULL;
+  `valor_recodificado` varchar(255) DEFAULT NULL);
 
 --
 -- Volcado de datos para la tabla `respuesta`

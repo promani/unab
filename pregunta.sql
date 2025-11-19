@@ -26,7 +26,7 @@ CREATE TABLE `pregunta` (
   `imagen` varchar(255) DEFAULT NULL,
   `anterior_id` int DEFAULT NULL,
   `script` varchar(255) DEFAULT NULL,
-  `siguiente_id` int DEFAULT NULL;
+  `siguiente_id` int DEFAULT NULL);
 
 --
 -- Volcado de datos para la tabla `pregunta`

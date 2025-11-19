@@ -11,7 +11,7 @@ CREATE TABLE `opcion` (
   `texto` text CHARACTER,
   `codigo` varchar(255),
   `imagen` varchar(255),
-  `orden` int DEFAULT NULL;
+  `orden` int DEFAULT NULL);
 
 --
 -- Volcado de datos para la tabla `opcion`
