@@ -1,11 +1,5 @@
 
 --
--- Base de datos: `doxa`
---
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `pregunta`
 --
 
@@ -125,45 +119,3 @@ INSERT INTO `pregunta` (`id`, `encuesta_id`, `parent_id`, `introduccion`, `texto
 (4515, 69, NULL, NULL, 'Imagínese dentro de cinco años ¿Le gustaría seguir viviendo en el municipio donde reside?', NULL, 'P3', 3, 'opcion', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (4514, 69, NULL, NULL, '¿Qué sentimiento le genera vivir en ese municipio?', 'Elija el sentimiento que cree que está más cerca de lo que le genera', 'P2', 2, 'opcion', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (4513, 69, NULL, NULL, '¿En qué municipio vive actualmente?', NULL, 'P1', 1, 'opcion', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `pregunta`
---
-ALTER TABLE `pregunta`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `IDX_AEE0E1F746844BA6` (`encuesta_id`),
-  ADD KEY `IDX_AEE0E1F7727ACA70` (`parent_id`),
-  ADD KEY `IDX_AEE0E1F717EFFBE8` (`anterior_id`),
-  ADD KEY `IDX_AEE0E1F737E94FA1` (`siguiente_id`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `pregunta`
---
-ALTER TABLE `pregunta`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4636;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `pregunta`
---
-ALTER TABLE `pregunta`
-  ADD CONSTRAINT `FK_AEE0E1F717EFFBE8` FOREIGN KEY (`anterior_id`) REFERENCES `pregunta` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `FK_AEE0E1F737E94FA1` FOREIGN KEY (`siguiente_id`) REFERENCES `pregunta` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `FK_AEE0E1F746844BA6` FOREIGN KEY (`encuesta_id`) REFERENCES `encuesta` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
-  ADD CONSTRAINT `FK_AEE0E1F7727ACA70` FOREIGN KEY (`parent_id`) REFERENCES `pregunta` (`id`) ON DELETE SET NULL ON UPDATE RESTRICT;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

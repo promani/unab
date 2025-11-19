@@ -1,11 +1,5 @@
 
 --
--- Base de datos: `doxa`
---
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `respuesta`
 --
 
@@ -46942,43 +46936,3 @@ INSERT INTO `respuesta` (`id`, `formulario_id`, `pregunta_id`, `encuesta_id`, `v
 (6130037, 112241, 4515, 69, '1', '2025-11-04 21:28:24', NULL),
 (6130036, 112241, 4514, 69, '2', '2025-11-04 21:28:10', NULL),
 (6130035, 112241, 4513, 69, '9', '2025-11-04 21:27:57', NULL);
-
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `respuesta`
---
-ALTER TABLE `respuesta`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `IDX_6C6EC5EE41CFE234` (`formulario_id`),
-  ADD KEY `IDX_6C6EC5EE31A5801E` (`pregunta_id`),
-  ADD KEY `IDX_6C6EC5EE46844BA6` (`encuesta_id`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `respuesta`
---
-ALTER TABLE `respuesta`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6176914;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `respuesta`
---
-ALTER TABLE `respuesta`
-  ADD CONSTRAINT `FK_6C6EC5EE31A5801E` FOREIGN KEY (`pregunta_id`) REFERENCES `pregunta` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT,
-  ADD CONSTRAINT `FK_6C6EC5EE41CFE234` FOREIGN KEY (`formulario_id`) REFERENCES `formulario` (`id`) ON DELETE SET NULL ON UPDATE RESTRICT,
-  ADD CONSTRAINT `FK_6C6EC5EE46844BA6` FOREIGN KEY (`encuesta_id`) REFERENCES `encuesta` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
