@@ -8,11 +8,10 @@ CREATE TABLE `opcion` (
   `pregunta_id` int DEFAULT NULL,
   `siguiente_id` int DEFAULT NULL,
   `anterior_id` int DEFAULT NULL,
-  `texto` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `codigo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `imagen` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `orden` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `texto` text CHARACTER,
+  `codigo` varchar(255),
+  `imagen` varchar(255),
+  `orden` int DEFAULT NULL;
 
 --
 -- Volcado de datos para la tabla `opcion`

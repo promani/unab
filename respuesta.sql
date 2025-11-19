@@ -14,10 +14,9 @@ CREATE TABLE `respuesta` (
   `formulario_id` int DEFAULT NULL,
   `pregunta_id` int DEFAULT NULL,
   `encuesta_id` int DEFAULT NULL,
-  `valor` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `valor` text NOT NULL,
   `fecha` datetime NOT NULL,
-  `valor_recodificado` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `valor_recodificado` varchar(255) DEFAULT NULL;
 
 --
 -- Volcado de datos para la tabla `respuesta`

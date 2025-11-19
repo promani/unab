@@ -13,21 +13,20 @@ CREATE TABLE `pregunta` (
   `id` int NOT NULL,
   `encuesta_id` int DEFAULT NULL,
   `parent_id` int DEFAULT NULL,
-  `introduccion` longtext COLLATE utf8mb4_unicode_ci,
-  `texto` longtext COLLATE utf8mb4_unicode_ci,
-  `ayuda` longtext COLLATE utf8mb4_unicode_ci,
-  `codigo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `introduccion` longtext,
+  `texto` longtext,
+  `ayuda` longtext,
+  `codigo` varchar(255) NOT NULL,
   `orden` int NOT NULL,
-  `tipo` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tipo` varchar(255) NOT NULL,
   `min` int DEFAULT NULL,
   `max` int DEFAULT NULL,
-  `segmentos` longtext COLLATE utf8mb4_unicode_ci COMMENT '(DC2Type:simple_array)',
-  `class` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `imagen` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `segmentos` longtext,
+  `class` varchar(255) DEFAULT NULL,
+  `imagen` varchar(255) DEFAULT NULL,
   `anterior_id` int DEFAULT NULL,
-  `script` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `siguiente_id` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `script` varchar(255) DEFAULT NULL,
+  `siguiente_id` int DEFAULT NULL;
 
 --
 -- Volcado de datos para la tabla `pregunta`
